@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+:root{
+    --Desaturated_red: hsl(0, 36%, 70%);
+    --Soft_red: hsl(0, 93%, 68%);
+    --Dark_grayish_red: hsl(0, 6%, 24%);
+    --standard_font:16px
+
+}
+body{ 
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), to hsl(0, 74%, 74%));
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.container
+{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.image-mobile{
+    margin-bottom: 2rem;
+}
+/* .image-desktop{
+    display: none;
+} */
+.image-mobile img{
+    width: 100%;
+    object-fit: cover;
+}
+.text{
+    text-align: center;
+    margin: 1rem 0;
+    font-weight: 300;
+}
+.title{
+    letter-spacing: 10px;
+    font-size: 36px;
+    color: var(--Dark_grayish_red);
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+.title span{
+    color: var(--Desaturated_red);
+    font-weight: 300;
+}
+nav{
+    text-align: left;
+    margin: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+}
+nav svg{
+    opacity: .85;
+}
+.paragraph {
+    min-width: 250px;
+    max-width: 500px;
+    margin: auto;
+}
+.paragraph p{
+    width: 100%;
+    color: var(--Desaturated_red);
+    font-size: var(--standard_font);
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    line-height: 1.4rem;
+    padding: 0 2.5rem;
+}
+.form{
+    position: relative;
+    width: 320px;
+    margin: auto;
+}
+.form input{
+    background: transparent;
+    outline: none;
+    border: 1px solid var(--Desaturated_red);
+    width: 100%;
+    height: 45px;
+    padding-left: 2rem;
+    border-radius: 25px;
+    color: var(--Soft_red);
+
+}
+.form input::placeholder{
+    color: var(--Dark_grayish_red);
+    font-weight: 300;
+    font-style: var(--standard_font);
+    color: var(--Desaturated_red);
+}
+
+.error{
+    border: 2px solid hsl(0deg 93% 40%);
+    border-radius: 25px;
+}
+.arrow{
+    /*  */
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%),hsl(0, 74%, 55%));
+    border: none;
+    border-radius: 50px;
+    position: absolute;
+    height: 45px;
+    width: 70px;
+    padding: 10px 30px; 
+    top: 0;
+    right: 0;
+}
+.arrow:hover{
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%),hsl(0, 74%, 74%));
+}
+.error_icon{
+    position: absolute;
+    top: 10px;
+    right: 80px;
+}
+.check_icon{
+    position: absolute;
+    top: 14px;
+    right: 80px;
+    font-size: 20px;
+    color: hsl(158deg 95% 34%);
+}
+ .error_message{
+    margin-top: 1rem;
+    position: absolute;
+    width: 100%;
+    display: block;
+    text-align: left;
+    margin-left: 2rem;
+    font-weight: 400;
+} 
+
+/* .arrow svg{
+    position: relative;
+    top: 13px;
+    padding-left: 5px;
+} */
+/* footer {
+    position: relative;
+    bottom: -5rem;
+    width: 100%;
+    opacity: .8;
+} */
+/* .attribution{
+    font-size: var(--standard_font);
+}  
+footer a{
+    text-decoration: none;
+} */
+@media only screen and (min-width:920px) {
+
+    body{
+        max-width: 1440px;
+        margin: auto;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+    }
+
+    .text{
+        width: 50%;
+        text-align: left;
+        margin-left: 5rem;
+        display: block;
+    }
+    .image-mobile{
+        display: none;
+    }
+    nav{
+        margin: 1rem .5rem;
+    }
+   .image-desktop{
+       display: block;
+       width: 50%;
+       height: 100vh;
+       background-image: url('images/hero-desktop.jpg');
+       background-repeat: no-repeat;
+       background-size: cover;
+       background-position-x: center;
+
+   }
+   .image-mobile img{
+       display: none;
+  }
+  .title,.paragraph,.form{
+    text-align: left;
+    margin: 1rem .5rem;
+    margin-bottom: 1.5rem;
+    padding-right: 4rem;
+    position: relative;
+    top: 20%;
+  }
+  .title{
+      font-weight: 600;
+      font-size: 46px;
+
+  }
+  .paragraph{
+      width: 700px;
+  }
+  .paragraph p {
+        width: 100%;
+        color: var(--Desaturated_red);
+        font-size: var(--standard_font);
+        margin-bottom: 1.5rem;
+        font-weight: 400;
+        line-height: 1.4rem;
+        padding-left: 0;
+        padding-right: 2.5rem;
+    }
+    .form{
+        width: 380px;
+    }
+    .form input{
+        width: 100%;
+    }
+    .arrow {
+        right: 50px;
+    }
+    .error_icon{
+        right: 130px;
+    }
+    .check_icon{
+        right: 130px;
+    }
+    /* footer{  
+        width: 100%;
+        bottom: -10rem;
+    } */
+}
+/* @media only screen and (min-device-width: 1000px) and (min-device-height: 800px) {
+    footer{  
+        bottom: -17rem;
+    }
+} */
