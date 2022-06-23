@@ -4,7 +4,7 @@
  - Template is design with simple Html Css and javascript
  - Flexbox for responsiveness
  - Email validation is done via regular expressions in javascript.
-
+ - Live view  https://62b30eb121f82811470d1383--statuesque-crumble-ccc48b.netlify.app/
 
 Desktop
 
